@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: pyapp
-        image: pyapp:latest
+        image: pyapp-v1:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 9000
