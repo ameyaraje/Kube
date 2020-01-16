@@ -45,3 +45,15 @@ spec:
         imagePullPolicy: Never
         ports:
         - containerPort: 9000
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 9000
+          initialDelaySeconds: 60
+          periodSeconds: 45
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 9000
+          initialDelaySeconds: 100
+          periodSeconds: 60
