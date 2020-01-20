@@ -11,6 +11,8 @@ EXPOSE 80
 
 CMD ["-D", "FOREGROUND"]
 
+ENTRYPOINT ["/usr/bin/python3"]
+
 
 # this is using the existing python image and trying to install flask
 # Ideally I wont do this, since all libraries would go into a requirements.txt, but this is only to test 

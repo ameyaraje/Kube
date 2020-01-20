@@ -33,7 +33,7 @@ spec:
   selector:
     matchLabels:
       app: pyapp
-  replicas: 3
+  replicas: 1
   template:
     metadata:
       labels:
@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: pyapp
-        image: pyapp-v1:latest
+        image: basicpyapp:latest
         imagePullPolicy: Never
         ports:
         - containerPort: 9000

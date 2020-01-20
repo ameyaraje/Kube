@@ -1,9 +1,9 @@
-FROM python:3.7
+FROM basepy:latest
 
-RUN mkdir /app
+# RUN mkdir /app
 WORKDIR /app
 ADD . /app/
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 EXPOSE 9000
-CMD ["python", "/app/app.py"]
+CMD ["python3", "/app/app.py"]
